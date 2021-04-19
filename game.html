@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userChoice = prompt("whats your move?");
+var computerSelection=undefined;
+    function computerPlay(){
+        let randNum=Math.ceil(Math.random()*3);
+        console.log(randNum);
+        if (randNum==1) {
+        computerSelection="rock";    
+        }
+        if (randNum==2) {
+            computerSelection="paper";
+             }
+             if (randNum==3) {
+                 computerSelection="scissors";
+                 
+             }
+        }
+        var computerChoice = computerPlay();
+        console.log(computerChoice);
+        function playRound(userChoice, computerSelection) {
+            if (userChoice == computerSelection){
+                return "tie";    
+            }
+            else if (userChoice==="rock"){
+
+                if (computerSelection==="scissors"){
+                    return "Rock Wins";
+        }
+                    else {
+                    return "Paper wins";
+            }
+        }
+
+            else if (userChoice==="paper"){
+
+                if (computerSelection==="rock"){
+                    return "Paper Wins";
+                }
+
+                    else{
+                    return "scissors wins";
+
+            }
+
+             }
+             else if (userChoice==="scissors"){
+                if (computerSelection==="rock"){
+                    return "rock Wins";
+                }
+                    else{
+                    return "scissors wins";
+
+            }
+       }
+    }
+console.log("you chose"+userChoice);
+console.log("computer chose"+computerSelection);
+console.log(playRound(userChoice,computerSelection));
+        
+  
+    
+    
+       
+    
+    </script>
+    
+    
+</body>
+</html>
